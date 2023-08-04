@@ -1,0 +1,41 @@
+html {
+    background-image: url("images/light-cloud.jpg");
+    z-index: -1;
+    overflow: hidden
+}
+
+::-webkit-scrollbar {
+  width: 0px
+}
+
+.scroll-section,
+.scroll-item {
+  height: 100vh;
+  font-size: 7vh;
+}
+
+.scroll-section {
+  overflow: auto;
+  -webkit-scroll-snap-type: y mandatory;
+      -ms-scroll-snap-type: y mandatory;
+          scroll-snap-type: y mandatory;
+}
+
+.scroll-item {
+  scroll-snap-align: center;
+}
+
+.scroll-section,
+.scroll-item {
+  margin: 0 auto;
+}
+
+.scroll-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background: bisque;
+  opacity: 50%;
+  font-style: serif;
+}
