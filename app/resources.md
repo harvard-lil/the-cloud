@@ -16,7 +16,7 @@
 [filecoin green](https://filecoin.energy/methodology)
 
 ## Images
-https://www.flickr.com/photos/123526936@N07/17001003589
-https://www.flickr.com/photos/39735679@N00/426262117
-https://www.flickr.com/photos/57873306@N00/2700487598
-https://www.stickpng.com/img/nature/clouds/small-white-cloud
+https://www.flickr.com/photos/123526936@N07/17001003589  
+https://www.flickr.com/photos/39735679@N00/426262117  
+https://www.flickr.com/photos/57873306@N00/2700487598  
+https://www.stickpng.com/img/nature/clouds/small-white-cloud  
