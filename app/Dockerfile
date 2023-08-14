@@ -1,4 +1,4 @@
-FROM python:3.7-buster
+FROM python:3.10-bullseye
 ENV STATIC_URL /static
 ENV STATIC_PATH /app/static
 RUN mkdir /app
