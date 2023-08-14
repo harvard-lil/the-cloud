@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "the cloud"
+version = "0.1.0"
+description = "What's your digital carbon footprint?"
+authors = ["R I B Z <kilbergr@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "2.3"
+python-kasa = "^0.5.3"
+"subprocess.run" = "^0.0.8"
+
+[tool.poetry.group.dev.dependencies]
+Flask = "2.3"
+python-kasa = "^0.5.3"
+"subprocess.run" = "^0.0.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
