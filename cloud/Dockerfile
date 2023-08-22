@@ -1,4 +1,6 @@
 FROM python:3.10-bullseye
+ENV STATIC_URL /static
+ENV STATIC_PATH /cloud/static
 RUN mkdir /cloud
 WORKDIR /cloud
 COPY . .
