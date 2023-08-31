@@ -1,10 +1,24 @@
-let options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 1.0,
-  };
+// import motusPkg from 'https://cdn.jsdelivr.net/npm/motus@2.0.5/+esm'
 
-const observer = new IntersectionObserver((entries, options) => {
+// // This was not working when importing above in typical fashion
+// const motus = motusPkg.default
+
+// Animation code
+// This works, but not with overflow: auto, which
+// seems necessary for the snap scroll effect
+
+// const animation = new motus.Animation({
+//     $el: document.getElementById("twentyone"),
+//     keyframes: [
+//         {
+//           fontSize: 2
+//         }
+//       ]
+//     });
+//   motus.addAnimation(animation);
+
+// Intersection Observer code for each scroll object
+const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
         

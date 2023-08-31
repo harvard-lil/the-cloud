@@ -5,13 +5,19 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 0px
+  width: 0vh
+}
+
+
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .scroll-section,
 .scroll-item {
   height: 100vh;
-  font-size: 7vh;
 }
 
 .scroll-section {
@@ -22,20 +28,60 @@ html {
 }
 
 .scroll-item {
-  scroll-snap-align: center;
-}
-
-.scroll-section,
-.scroll-item {
-  margin: 0 auto;
-}
-
-.scroll-item {
   display: flex;
   align-items: center;
   justify-content: center;
   color: black;
-  background: bisque;
+  font-family: serif;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  margin: 2vh;
+  font-size: 7vh;
+}
+
+.grams-section {
+  background: #ffe4c4;
   opacity: 50%;
-  font-style: serif;
+}
+
+.kilo-section {
+  background: #6d849c;
+  opacity: 50%;
+}
+
+.tons-section {
+  background: #586067;
+  opacity: 60%;
+}
+
+.mm-tons-section {
+  background: #2e3236;
+  opacity: 60%;
+}
+
+.scroll-item-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-family: serif;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  margin: 2vh;
+  height: 100vh;
+  font-size: 10vh;
+  opacity: 100%;
+}
+
+@keyframes shrink {
+  from {
+    font-size: 7vh;
+  }
+  to {
+    font-size: 3vh;
+  }
+}
+
+.shrink-text {
+  animation: shrink 3s ease forwards;
 }
