@@ -1,21 +1,30 @@
-// import motusPkg from 'https://cdn.jsdelivr.net/npm/motus@2.0.5/+esm'
+// Adding and removing the shrink animation to each transition div
+document.addEventListener("DOMContentLoaded", function () {
+    function scrollTransform(divId) {
+        const targetDiv = document.getElementById(divId);
+        let prevIntersecting = false;
 
-// // This was not working when importing above in typical fashion
-// const motus = motusPkg.default
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.target === targetDiv) {
+                    if (entry.isIntersecting) {
+                        if (!prevIntersecting) {
+                            targetDiv.classList.add('shrink-text');
+                        }
+                    } else {
+                        targetDiv.classList.remove('shrink-text');
+                    }
+                    prevIntersecting = entry.isIntersecting;
+                }
+            });
+        });
+        observer.observe(targetDiv);
+    }
 
-// Animation code
-// This works, but not with overflow: auto, which
-// seems necessary for the snap scroll effect
-
-// const animation = new motus.Animation({
-//     $el: document.getElementById("twentyone"),
-//     keyframes: [
-//         {
-//           fontSize: 2
-//         }
-//       ]
-//     });
-//   motus.addAnimation(animation);
+scrollTransform("twentytwo")
+scrollTransform("sixtythree")
+scrollTransform("sixtysix")
+});
 
 // Intersection Observer code for each scroll object
 const observer = new IntersectionObserver((entries) => {
