@@ -6,7 +6,7 @@ authors = ["R I B Z <kilbergr@users.noreply.github.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 Flask = "2.3"
 python-kasa = "^0.5.3"
 "subprocess.run" = "^0.0.8"
