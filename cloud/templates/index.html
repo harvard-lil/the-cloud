@@ -10,94 +10,164 @@
     </head>
     <body>
         <div class="scroll-container">
+            <div class="balloon"></div>
             <div class="scroll-section">
-                <div class="grams-section">
-                    <div class="scroll-item-title" id="grams">Grams</div>
-                    <div class="scroll-item" id="one" data-fetch-url="/on?time=.005">A spam email caught by filters (0.05 g)</div>
-                    <div class="scroll-item" id="two" data-fetch-url="/on?time=.02">A short email sent from one phone and received on another (0.2 g)</div>
-                    <div class="scroll-item" id="three" data-fetch-url="/on?time=.04">A short email sent from one laptop and received on another (0.4 g)</div>
-                    <div class="scroll-item" id="four" data-fetch-url="/on?time=.06" >A Google search (0.6 g)</div>
-                    <div class="scroll-item" id="five" data-fetch-url="/on?time=.08">A text message that takes 30 seconds to write and 30 seconds to read (0.8 g)</div>
-                    <div class="scroll-item" id="six" data-fetch-url="/on?time=.4">A one-hour Zoom call on a 13" MacBook pro (4 g)</div>
-                    <div class="scroll-item" id="seven" data-fetch-url="/on?time=.6">One hour on a 16" MacBook pro (6 g)</div>
-                    <div class="scroll-item" id="eight" data-fetch-url="/on?time=.69">Five minutes browsing the web on a smartphone (6.9 g)</div>
-                    <div class="scroll-item" id="nine" data-fetch-url="/on?time=.8">One hour of the BBC transmitting digital broadcasting  (8 g)</div>
-                    <div class="scroll-item" id="ten" data-fetch-url="/on?time=.96">Five minutes browsing the web on a laptop (9.6 g)</div>
-                    <div class="scroll-item" id="eleven" data-fetch-url="/on?time=1.2">One hour using a 14" HP Chromebook 14 G5 (12 g)</div>
-                    <div class="scroll-item" id="twelve" data-fetch-url="/on?time=1.2">A long email sent between laptops that takes 10 minutes to write and 3 minutes to read (17 g)</div>
-                    <div class="scroll-item" id="thirteen" data-fetch-url="/on?time=1.2">One hour using on laptop of average efficiency (20 g)</div>
-                    <div class="scroll-item" id="fourteen" data-fetch-url="/on?time=1.2">One hour WiFi use in the UK (22 g)</div>
-                    <div class="scroll-item" id="fifteen" data-fetch-url="/on?time=1.2">A long email sent to 100 people that takes 10 minutes to write. One recipient reads it, 99 recipients delete it after three seconds (29 g)</div>
-                    <div class="scroll-item" id="sixteen" data-fetch-url="/on?time=1.2">One hour use of servers and networks in the UK (37 g)</div>
-                    <div class="scroll-item" id="seventeen" data-fetch-url="/on?time=1.2">One hour of transmission of BBC iPlayer onto a large TV screen (49 g)</div>
-                    <div class="scroll-item" id="eighteen" data-fetch-url="/on?time=1.2">1 hour streaming media (like music) (55 g)</div>
-                    <div class="scroll-item" id="nineteen" data-fetch-url="/on?time=1.2">One hour using a desktop computer with a screen (98 g)</div>
-                    <div class="scroll-item" id="twenty" data-fetch-url="/on?time=1.2">One hour on a gaming PC with screen (130 g)</div>
-                    <div class="scroll-item" id="twentyone" data-fetch-url="/on?time=1.2">One hour streaming TV on 13" MacBook Pro (179 g)</div>
-                    <div class="scroll-item" id="twentytwo" data-fetch-url="/on?time=1.2">One hour streaming on a 55 inch LED TV (279 g)</div>
+            <div class="grams-section">
+                <div class="scroll-item-title grams-title">
+                    <p>GRAMS</p>
                 </div>
-                <div class="kilo-section">
-                    <div class="scroll-item-title">Kilograms</div>
-                    <div class="scroll-item" id="twentythree" data-fetch-url="/on?time=1.2">One million Office files stored for one year by Arkivum on Google Cloud Platform in Finland (2.2 kg)</div>
-                    <div class="scroll-item" id="twentyfour" data-fetch-url="/on?time=1.2">One year of receiving 75 emails per day on average, in which 41 are spam and 34 took 10 seconds to write and 5 seconds to read (3 kg)</div>
-                    <div class="scroll-item" id="twentyfive" data-fetch-url="/on?time=1.2">One 2g microprocessor chip (5 kg)</div>
-                    <div class="scroll-item" id="twentysix" data-fetch-url="/on?time=1.2">One million Office files stored for one year by Arkivum on Google Cloud Platform in Frankfurt (5.5 kg)</div>
-                    <div class="scroll-item" id="twentyseven" data-fetch-url="/on?time=1.2">Logitech G Pro Wireless Gaming Mouse (7.84 kg)</div>
-                    <div class="scroll-item" id="twentyeight" data-fetch-url="/on?time=1.2">Training BERT (language modeling) on 8 V100s for 36 hours in the West US region (14 kg)</div>
-                    <div class="scroll-item" id="twentynine" data-fetch-url="/on?time=1.2">Training BERT (language modeling) on 8 V100s for 36 hours in the North Europe region (16 kg)</div>
-                    <div class="scroll-item" id="thirty" data-fetch-url="/on?time=1.2">Logitech G213 Prodigy Gaming Keyboard (22 kg)</div>
-                    <div class="scroll-item" id="thirtyone" data-fetch-url="/on?time=1.2">Use of External LCD Monitor at home (23 kg)</div>
-                    <div class="scroll-item" id="thirtytwo" data-fetch-url="/on?time=1.2">Training BERT (language modeling) on 8 V100s for 36 hours in the Central US region (26 kg)</div>
-                    <div class="scroll-item" id="thirtythree" data-fetch-url="/on?time=1.2">One year of WiFi router use (30 kg)</div>
-                    <div class="scroll-item" id="thirtyfour" data-fetch-url="/on?time=1.2">One year of receiving 75 emails per day on average, which each took three minutes to write and one minute to read (38 kg)</div>
-                    <div class="scroll-item" id="thirtyfive" data-fetch-url="/on?time=1.2">Electricity to power one year of using a smartphone smartphone 3.25 hours per day (42 kg)</div>
-                    <div class="scroll-item" id="thirtysix" data-fetch-url="/on?time=1.2">Data transmissions for one year of using a smartphone for 3.25 hours per day (43 kg)</div>
-                    <div class="scroll-item" id="thirtyseven" data-fetch-url="/on?time=1.2">The lifetime footprint of a 4k 3rd Generation 128 GB Apple TV with Siri remote (46 kg)</div>
-                    <div class="scroll-item" id="thirtyeight" data-fetch-url="/on?time=1.2">Manufacture of the average mobile phone in 2018 (55 kg)</div>
-                    <div class="scroll-item" id="thirtynine" data-fetch-url="/on?time=1.2">Lifetime footprint of Apple Watch Ultra (GPS + Cellular) (56 kg)</div>
-                    <div class="scroll-item" id="forty" data-fetch-url="/on?time=1.2">Lifetime footprint of iPhone 14 128 GB (61 kg)</div>
-                    <div class="scroll-item" id="fortyone" data-fetch-url="/on?time=1.2">One million Office files ingested by Arkivum on Google Cloud Platform in Finland (63 kg)</div>
-                    <div class="scroll-item" id="fortytwo" data-fetch-url="/on?time=1.2">Lifetime footprint of iPhone 13 128 GB (64 kg)</div>
-                    <div class="scroll-item" id="fortythree" data-fetch-url="/on?time=1.2">One year of using a smartphone for one hour per day (70 kg)</div>
-                    <div class="scroll-item" id="fortyfour" data-fetch-url="/on?time=1.2">Lifetime footprint of iPhone 13 256 GB (71 kg)</div>
-                    <div class="scroll-item" id="fortyfive" data-fetch-url="/on?time=1.2">One year of using a typical smartphone for 3.25 hours per day (76 kg)</div>
-                    <div class="scroll-item" id="fortysix" data-fetch-url="/on?time=1.2">Lifetime footprint of iPhone 13 512 GB (83 kg)</div>
-                    <div class="scroll-item" id="fortyseven" data-fetch-url="/on?time=1.2">Lifetime footprint of iPhone 14 512 GB (83 kg)</div>
-                    <div class="scroll-item" id="fortyeight" data-fetch-url="/on?time=1.2">Lifetime footprint of Apple iPad Air (5th generation) 256 GB (92 kg)</div>
-                    <div class="scroll-item" id="fortynine" data-fetch-url="/on?time=1.2">Use of External CRT Monitor at work (95 kg)</div>
-                    <div class="scroll-item" id="fifty" data-fetch-url="/on?time=1.2">One year of using a smartphone for 10 hours per day (96 kg)</div>
-                    <div class="scroll-item" id="fiftyone" data-fetch-url="/on?time=1.2">iPhone 11 manufacture and transport to user (105 kg)</div>
-                    <div class="scroll-item" id="fiftytwo" data-fetch-url="/on?time=1.2">One million Office files ingested by Arkivum on Google Cloud Platform in Frankfurt (140 kg)</div>
-                    <div class="scroll-item" id="fiftythree" data-fetch-url="/on?time=1.2">Buying a 13" MacBook Pro with 128 GB storage (326 kg)</div>
-                    <div class="scroll-item" id="fiftyfour" data-fetch-url="/on?time=1.2">Buying a low-cost 14" HPP Chromebook 14 G5 (329 kg)</div>
-                    <div class="scroll-item" id="fiftyfive" data-fetch-url="/on?time=1.2">Buying a 15" Dell Precision 5530 with 256 GB storage (475 kg)</div>
-                    <div class="scroll-item" id="fiftysix" data-fetch-url="/on?time=1.2">Lifetime footprint of Apple Studio Display with tilt-adjustable stand (544 kg)</div>
-                    <div class="scroll-item" id="fiftyseven" data-fetch-url="/on?time=1.2">Having a hand rehabilitation telemedicine appointment in Sweden (602 kg)</div>
-                    <div class="scroll-item" id="fiftyeight" data-fetch-url="/on?time=1.2">Buying a 16" MacBook Pro with 1 TB storage (620 kg)</div>
-                    <div class="scroll-item" id="fiftynine" data-fetch-url="/on?time=1.2">One PB of large image files ingested by Arkivum on Google Cloud Platform in Finland (730 kg)</div>
-                    <div class="scroll-item" id="sixty" data-fetch-url="/on?time=1.2">Embodied lifetime of 55 inch LED screen (735 kg)</div>
-                    <div class="scroll-item" id="sixtyone" data-fetch-url="/on?time=1.2">One PB of large image files ingested by Arkivum on Google Cloud Platform in Frankfurt (1600 kg)</div>
-                    <div class="scroll-item" id="sixtytwo" data-fetch-url="/on?time=1.2">One PB of Arkivum data stored for one year on Google Cloud Platform in Finland (3500 kg)</div>
-                    <div class="scroll-item" id="sixtythree" data-fetch-url="/on?time=1.2">One PB data of Arkivum data stored for 1 year on Google Cloud Platform in Frankfurt (7800 kg)</div>
+                <div class="scroll-item grams" id="one" data-fetch-url="/on?time=.005"> 
+                    <p>A spam email caught by filters <br>(0.05 g)</p>
                 </div>
-                <div class="tons-section">
-                    <div class="scroll-item-title">Tons and Tonnes</div>
-                    <div class="scroll-item" id="sixtyfour" data-fetch-url="/on?time=1.2">ChatGPT each day (assumed hosted in Western USA) (24.86 tonnes)</div>
-                    <div class="scroll-item" id="sixtyfive" data-fetch-url="/on?time=1.2">Open-access BLOOM model AI (30 tons)</div>
-                    <div class="scroll-item" id="sixtysix" data-fetch-url="/on?time=1.2">Training natural language processing algorithm with neural architecture search (such as used for Alexa) (285.76 tonnes)</div>
+                <div class="scroll-item grams" id="two" data-fetch-url="/on?time=.02">
+                    <p class="two">A short email sent from one phone and received on another <br>(0.2 g)</p>
                 </div>
-                <div class="mm-tons-section">
-                    <div class="scroll-item-title">Millions of Tons and Tonnes</div>
-                    <div class="scroll-item" id="sixtyseven" data-fetch-url="/on?time=1.2">Mining bitcoin for one year using hydroelectric power only in 2023 (3 million tonnes)</div>
-                    <div class="scroll-item" id="sixtyeight" data-fetch-url="/on?time=1.2">Bitcoin in 2019 (46 million tons)</div>
-                    <div class="scroll-item" id="sixtynine" data-fetch-url="/on?time=1.2">All cryptocurrencies in 2019 (68 million tons)</div>
-                    <div class="scroll-item" id="seventy" data-fetch-url="/on?time=1.2">Mining bitcoin for one year using a variety of different energy sources in 2023 (72.48 million tonnes)</div>
-                    <div class="scroll-item" id="seventyone" data-fetch-url="/on?time=1.2">The cloud and the world's data centers in 2010 (130 million tons)</div>
-                    <div class="scroll-item" id="seventytwo" data-fetch-url="/on?time=1.2">Mining bitcoin for one year using coal power only in 2023 (143.18 million tonnes)</div>
-                    <div class="scroll-item" id="seventythree" data-fetch-url="/on?time=1.2">The cloud and the world's data centers in 2020 (160 million tons)</div>
-                    <div class="scroll-item" id="seventythree" data-fetch-url="/on?time=1.2">Global mobile phone usage (580 million tons)</div>
+                <div class="scroll-item grams" id="three" data-fetch-url="/on?time=.04">
+                    <p>A short email sent from one laptop and received on another <br>(0.4 g)</p>
+                </div>
+                <div class="scroll-item grams" id="four" data-fetch-url="/on?time=.006">
+                    <p>A Google search <br>(0.6 g)</p>
+                </div>
+                <div class="scroll-item grams" id="five" data-fetch-url="/on?time=.008">
+                    <p>A text message that takes 30 seconds to write and 30 seconds to read <br>(0.8 g)</p>
+                </div>
+                <div class="scroll-item grams" id="six" data-fetch-url="/on?time=.04">
+                    <p>A one-hour Zoom call on a 13" MacBook pro <br>(4 g)</p>
+                </div>
+                <div class="scroll-item grams" id="eight" data-fetch-url="/on?time=.069">
+                    <p>Five minutes browsing the web on a smartphone <br>(6.9 g)</p>
+                </div>
+                <div class="scroll-item grams" id="ten" data-fetch-url="/on?time=.096">
+                    <p>Five minutes browsing the web on a laptop <br>(9.6 g)</p>
+                </div>
+                <div class="scroll-item grams" id="twelve" data-fetch-url="/on?time=.17">
+                    <p>A long email sent between laptops that takes 10 minutes to write and 3 minutes to read <br>(17 g)</p>
+                </div>
+                <div class="scroll-item grams" id="thirteen" data-fetch-url="/on?time=.2">
+                    <p>One hour using on laptop of average efficiency <br>(20 g)</p>
+                </div>
+                  <div class="scroll-item grams" id="eighteen" data-fetch-url="/on?time=.55">
+                    <p>1 hour streaming media (like music) <br>(55 g)</p>
+                </div>
+                <div class="scroll-item grams" id="nineteen" data-fetch-url="/on?time=.98">
+                    <p>One hour using a desktop computer with a screen <br>(98 g)</p>
+                </div>
+                <div class="scroll-item grams" id="twenty" data-fetch-url="/on?time=1.30">
+                    <p>One hour on a gaming PC with screen <br>(130 g)</p>
+                </div>
+                <div class="scroll-item grams" id="twentyone" data-fetch-url="/on?time=1.79">
+                    <p>One hour streaming TV on 13" MacBook Pro <br>(179 g)</p>
+                </div>
+                <div class="scroll-item grams" id="twentytwo" data-fetch-url="/on?time=2.79">
+                    <p>One hour streaming on a 55 inch LED TV <br>(279 g)</p>
+                </div>
+            </div>
+            <div class="kilo-section">
+                <div class="scroll-item-title kilos-title"><p>Kilograms</p></div>
+                <div class="scroll-item kilos" id="twentythree" data-fetch-url="/on?time=.22">
+                    <p>One million Office files stored for one year by Arkivum on GCP in Finland <br>(2.2 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="twentyfive" data-fetch-url="/on?time=.5">
+                    <p>One 2g microprocessor chip <br>(5 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="twentysix" data-fetch-url="/on?time=.55">
+                    <p>One million Office files stored for one year by Arkivum on GCP in Frankfurt <br>(5.5 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="twentyseven" data-fetch-url="/on?time=.784">
+                    <p>Logitech G Pro Wireless Gaming Mouse <br>(7.84 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="twentyeight" data-fetch-url="/on?time=1.4">
+                    <p>Training BERT (language modeling) on 8 V100s for 36 hours in the West US region <br>(14 kg)</p>
+                </div>
+                 <div class="scroll-item kilos" id="thirty" data-fetch-url="/on?time=2.2">
+                    <p>Logitech G213 Prodigy Gaming Keyboard <br>(22 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="thirtyone" data-fetch-url="/on?time=2.3">
+                    <p>Use of External LCD Monitor at home <br>(23 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="thirtythree" data-fetch-url="/on?time=3">
+                    <p>One year of WiFi router use <br>(30 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="thirtyfour" data-fetch-url="/on?time=3.8">
+                    <p>One year of receiving 75 emails per day on average, which each took three minutes to write and one minute to read <br>(38 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="thirtyfive" data-fetch-url="/on?time=4.2">
+                    <p>Electricity to power one year of using a smartphone smartphone 3.25 hours per day <br>(42 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="thirtysix" data-fetch-url="/on?time=4.3">
+                    <p>Data transmissions for one year of using a smartphone for 3.25 hours per day <br>(43 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="forty" data-fetch-url="/on?time=6.1">
+                    <p>Lifetime footprint of iPhone 14 128 GB <br>(61 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="fortyfive" data-fetch-url="/on?time=7.6">
+                    <p>One year of using a typical smartphone for 3.25 hours per day <br>(76 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="fortyeight" data-fetch-url="/on?time=9.2">
+                    <p>Lifetime footprint of Apple iPad Air <br>(5th generation) 256 GB <br>(92 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="fifty" data-fetch-url="/on?time=9.6">
+                    <p>One year of using a smartphone for 10 hours per day <br>(96 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="fiftytwo" data-fetch-url="/on?time=14">
+                    <p>One million Office files ingested by Arkivum on GCP in Frankfurt <br>(140 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="fiftyfour" data-fetch-url="/on?time=32.9">
+                    <p>Buying a low-cost 14" HP Chromebook 14 G5 <br>(329 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="fiftyfive" data-fetch-url="/on?time=47.5">
+                    <p>Buying a 15" Dell Precision 5530 with 256 GB storage <br>(475 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="fiftyeight" data-fetch-url="/on?time=62">
+                    <p>Buying a 16" MacBook Pro with 1 TB storage <br>(620 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="sixtyone" data-fetch-url="/on?time=160">
+                    <p>One PB of large image files ingested by Arkivum in Frankfurt <br>(1600 kg)</p>
+                </div>
+                <div class="scroll-item kilos" id="sixtythree" data-fetch-url="/on?time=780">
+                    <p>One PB data of Arkivum data stored for a year in Frankfurt <br>(7800 kg)</p>
+                </div>
+            </div>
+            <div class="tons-section">
+                <div class="scroll-item-title tons-title"><p>Tons</p></div>
+                <div class="scroll-item tons" id="sixtyfour" data-fetch-url="/on?time=27.4">
+                    <p>ChatGPT each day <br>(assumed hosted in Western USA) <br>(27.4 tons)</p>
+                </div>
+                <div class="scroll-item tons" id="sixtyfive" data-fetch-url="/on?time=30">
+                    <p>Open-access BLOOM model AI <br>(30 tons)</p>
+                </div>
+                <div class="scroll-item tons" id="sixtysix" data-fetch-url="/on?time=315">
+                    <p>Training natural language processing algorithm with neural architecture search (such as used for Alexa) <br>(315 tons)</p>
+                </div>
+            </div>
+            <div class="m-tons-section">
+                <div class="scroll-item-title m-tons-title"><p>Millions of Tons</p></div>
+                <div class="scroll-item m-tons" id="sixtyseven" data-fetch-url="/on?time=3300">
+                    <p>Mining bitcoin for one year using hydroelectric power only in 2023 (3.3 million tons)</p>
+                </div>
+                <div class="scroll-item m-tons" id="sixtyeight" data-fetch-url="/on?time=46000">
+                    <p>Bitcoin in 2019 (46 million tons)</p>
+                </div>
+                <div class="scroll-item m-tons" id="sixtynine" data-fetch-url="/on?time=68000">
+                    <p>All cryptocurrencies in 2019 (68 million tons)</p>
+                </div>
+                <div class="scroll-item m-tons" id="seventy" data-fetch-url="/on?time=79900">
+                    <p>Mining bitcoin for one year using a variety of different energy sources in 2023 (79.9 million tons)</p>
+                </div>
+                <div class="scroll-item m-tons" id="seventyone" data-fetch-url="/on?time=130000">
+                    <p>The cloud and the world's data centers in 2010 (130 million tons)</p>
+                </div>
+                <div class="scroll-item m-tons" id="seventythree" data-fetch-url="/on?time=160000">
+                    <p>The cloud and the world's data centers in 2020 (160 million tons)</p>
+                </div>
+                <div class="scroll-item m-tons" id="seventythree" data-fetch-url="/on?time=580000">
+                    <p>Global mobile phone usage (580 million tons)</p>
                 </div>
             </div>
         </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script src="static/animation.js"></script>
     </body>
 </html>

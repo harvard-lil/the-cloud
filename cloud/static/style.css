@@ -1,27 +1,37 @@
+@font-face {
+  font-family: 'Goudy';
+  src: url('fonts/GoudyStM-Italic-webfont.eot');
+  src: url('fonts/GoudyStM-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/GoudyStM-Italic-webfont.woff') format('woff'),
+       url('fonts/GoudyStM-Italic-webfont.ttf') format('truetype'),
+       url('fonts/GoudyStM-Italic-webfont.svg#webfonto679uXZB') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Goudy';
+  src: url('fonts/GoudyStM-webfont.eot');
+  src: url('fonts/GoudyStM-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/GoudyStM-webfont.woff') format('woff'),
+       url('fonts/GoudyStM-webfont.ttf') format('truetype'),
+       url('fonts/GoudyStM-webfont.svg#webfontuJixCSe1') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 html {
-    background-image: url("images/light-cloud.jpg");
-    z-index: -1;
-    overflow: hidden
+    background-image: url("images/cloud-repeat.jpg");
+    z-index: -10;
 }
 
 ::-webkit-scrollbar {
   width: 0vh
 }
 
-
 .scroll-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.scroll-section,
-.scroll-item {
-  height: 100vh;
-}
-
-.scroll-section {
-  overflow: auto;
+  height: 10vh;
   -webkit-scroll-snap-type: y mandatory;
       -ms-scroll-snap-type: y mandatory;
           scroll-snap-type: y mandatory;
@@ -31,46 +41,53 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
   font-family: serif;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
-  margin: 2vh;
   font-size: 7vh;
+  height: 50vh;
 }
 
-.grams-section {
-  background: #ffe4c4;
-  opacity: 50%;
+.scroll-item p {
+  margin: 10vh;
+  color: black;
+  z-index: 1;
 }
 
-.kilo-section {
-  background: #6d849c;
-  opacity: 50%;
+.grams {
+  z-index: -5;
 }
 
-.tons-section {
-  background: #586067;
-  opacity: 60%;
+.grams-title {
+  background: rgb(255, 228, 196, 0.5);
 }
 
-.mm-tons-section {
-  background: #2e3236;
-  opacity: 60%;
+.kilos-title {
+  background: rgb(109, 132, 156, 0.5);
+}
+
+.tons-title {
+  background: rgb(88, 96, 103, 0.6);
+}
+
+.m-tons-title {
+  background: rgb(46, 50, 54, 0.6);
 }
 
 .scroll-item-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
-  font-family: serif;
+  font-family: 'Goudy', serif;
+  font-style: italic;
   scroll-snap-align: center;
   scroll-snap-stop: always;
-  margin: 2vh;
   height: 100vh;
   font-size: 10vh;
-  opacity: 100%;
+}
+
+.scroll-item-title p {
+  margin: 10vh;
+  color: black;
+  z-index: 10;
 }
 
 @keyframes shrink {
@@ -84,4 +101,18 @@ html {
 
 .shrink-text {
   animation: shrink 3s ease forwards;
+}
+
+.balloon {
+  position: fixed;
+  width: 142vmax;
+  height: 142vmax;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.001);
+  border-radius: 50%;
+  background-color: aqua;
+  opacity: 60%;
+  z-index: 1;
 }
