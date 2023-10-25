@@ -41,9 +41,10 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-family: serif;
   font-size: 7vh;
-  height: 50vh;
+  height: 80vh;
 }
 
 .scroll-item p {
@@ -57,19 +58,19 @@ html {
 }
 
 .grams-title {
-  background: rgb(255, 228, 196, 0.5);
+  background-color: rgb(255, 228, 196, 0.5);
 }
 
 .kilos-title {
-  background: rgb(109, 132, 156, 0.5);
+  background-color: rgb(109, 132, 156, 0.5);
 }
 
 .tons-title {
-  background: rgb(88, 96, 103, 0.6);
+  background-color: rgb(88, 96, 103, 0.5);
 }
 
 .m-tons-title {
-  background: rgb(46, 50, 54, 0.6);
+  background-color: rgb(46, 50, 54, 0.5);
 }
 
 .scroll-item-title {
@@ -88,6 +89,10 @@ html {
   margin: 10vh;
   color: black;
   z-index: 10;
+}
+
+.separator {
+  height: 50vh;
 }
 
 @keyframes shrink {
@@ -112,7 +117,7 @@ html {
   top: 50%;
   transform: translate(-50%, -50%) scale(0.001);
   border-radius: 50%;
-  background-color: aqua;
+  background-color: rgba(37, 39, 42, 0.6);
   opacity: 60%;
   z-index: 1;
 }
