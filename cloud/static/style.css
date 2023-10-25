@@ -45,6 +45,8 @@ html {
   font-family: serif;
   font-size: 7vh;
   height: 80vh;
+  margin-left: -3vh;
+  margin-right: -3vh;
 }
 
 .scroll-item p {
@@ -59,18 +61,27 @@ html {
 
 .grams-title {
   background-color: rgb(255, 228, 196, 0.5);
+  margin-left: -3vh;
+  margin-right: -3vh;
+  margin-top: -3vh;
 }
 
 .kilos-title {
   background-color: rgb(109, 132, 156, 0.5);
+  margin-left: -3vh;
+  margin-right: -3vh;
 }
 
 .tons-title {
   background-color: rgb(88, 96, 103, 0.5);
+  margin-left: -3vh;
+  margin-right: -3vh;
 }
 
 .m-tons-title {
   background-color: rgb(46, 50, 54, 0.5);
+  margin-left: -3vh;
+  margin-right: -3vh;
 }
 
 .scroll-item-title {
@@ -93,6 +104,8 @@ html {
 
 .separator {
   height: 50vh;
+  margin-left: -3vh;
+  margin-right: -3vh;
 }
 
 @keyframes shrink {
