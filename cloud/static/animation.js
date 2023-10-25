@@ -4,8 +4,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 let timeline = gsap.timeline({
     scrollTrigger: {
+        scroller: ".scroll-section",
         start: "top top",
-        end: "120000%",
+        end: "12000%",
         scrub: true,
         pin: true
     }
