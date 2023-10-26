@@ -94,27 +94,27 @@ section {
 }
 
 .tons-title {
-  background-color: rgba(88, 96, 103, 0.6);
+  background-color: rgba(88, 96, 103, 0.7);
 }
 
 .tons-title p {
-  color: rgb(255, 228, 196, 0.9);
+  color: rgb(255, 228, 196);
 }
 
 .tons p {
-  color: rgb(255, 228, 196, 0.9);
+  color: rgb(255, 228, 196);
 }
 
 .m-tons-title {
-  background-color: rgba(46, 50, 54, 0.6);
+  background-color: rgba(46, 50, 54, 0.7);
 }
 
 .m-tons-title p {
-  color: rgb(255, 228, 196, 0.7);
+  color: rgb(255, 228, 196, 0.9);
 }
 
 .m-tons p {
-  color: rgb(255, 228, 196, 0.8);
+  color: rgb(255, 228, 196, 0.9);
 }
 
 /* Animations */

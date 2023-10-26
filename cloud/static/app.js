@@ -77,7 +77,7 @@ const tonItems = document.getElementsByClassName("tons")
 for (var i = 0; i < tonItems.length; i++) {
     var item = tonItems[i];
     item.style.fontSize = `${(4 + (i*2))}vmin`
-    item.style.background = `rgb(${88-(i*6)}, ${96-(i*6.57)}, ${103-(i*7)}, 0.6)`
+    item.style.background = `rgb(${88-(i*6)}, ${96-(i*6.57)}, ${103-(i*7)}, 0.7)`
 }
 
 // Change the font size of each ton item from 4vh to 10 (with 8 steps)
@@ -86,6 +86,5 @@ const millTonItems = document.getElementsByClassName("m-tons")
 for (var i = 0; i < millTonItems.length; i++) {
     var item = millTonItems[i];
     item.style.fontSize = `${(4 + (i*.75))}vmin`
-    item.style.background = `rgb(${46-(i*5.75)}, ${50-(i*6.25)}, ${54-(i*6.75)}, 0.6)`
-    // item.children[0].style.color = `rgb(${0-(i*5.75)}, ${0-(i*6.25)}, ${0-(i*6.75)})`
+    item.style.background = `rgb(${46-(i*5.75)}, ${50-(i*6.25)}, ${54-(i*6.75)}, 0.7)`
 }
