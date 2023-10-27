@@ -66,6 +66,35 @@ section {
   z-index: 1;
 }
 
+.unit {
+  color: black;
+  font-size: 7vh;
+  z-index: 1;
+  margin-bottom: 0vh;
+}
+
+.xs {
+  font-size: 3vh;
+  margin-top: 4vh;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sm {
+  font-size: 5vh;
+  margin-top: 4vh;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.md {
+  font-size: 6vh;
+  color: rgb(255, 228, 196, 0.4);
+}
+
+.lg {
+  font-size: 7vh;
+  color: rgb(255, 228, 196, 0.4);
+}
+
 .scroll-item-title {
   display: flex;
   align-items: center;
@@ -75,7 +104,7 @@ section {
   scroll-snap-align: center;
   scroll-snap-stop: always;
   height: 100vh;
-  font-size: 8vh;
+  font-size: 7vh;
 }
 
 .scroll-item-title p {
@@ -115,20 +144,6 @@ section {
 
 .m-tons p {
   color: rgb(255, 228, 196, 0.9);
-}
-
-/* Animations */
-@keyframes shrink {
-  from {
-    font-size: 7vh;
-  }
-  to {
-    font-size: 3vh;
-  }
-}
-
-.shrink-text {
-  animation: shrink 3s ease forwards;
 }
 
 .balloon {

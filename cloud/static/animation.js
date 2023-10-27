@@ -12,4 +12,4 @@ let timeline = gsap.timeline({
     }
 });
 
-timeline.to(".balloon", {scale: 1.5})
+timeline.to(".balloon", {scale: 1.25})

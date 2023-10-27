@@ -1,31 +1,3 @@
-// Adding and removing the shrink animation to each transition div
-document.addEventListener("DOMContentLoaded", function () {
-    function scrollTransform(divId) {
-        const targetDiv = document.getElementById(divId);
-        let prevIntersecting = false;
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.target === targetDiv) {
-                    if (entry.isIntersecting) {
-                        if (!prevIntersecting) {
-                            targetDiv.classList.add('shrink-text');
-                        }
-                    } else {
-                        targetDiv.classList.remove('shrink-text');
-                    }
-                    prevIntersecting = entry.isIntersecting;
-                }
-            });
-        });
-        observer.observe(targetDiv);
-    }
-
-scrollTransform("twentytwo")
-scrollTransform("sixtythree")
-scrollTransform("sixtysix")
-});
-
 // Intersection Observer code for each scroll object
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
