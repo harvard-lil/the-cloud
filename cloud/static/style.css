@@ -1,25 +1,35 @@
 @font-face {
   font-family: 'Goudy';
-  src: url('fonts/GoudyStM-Italic-webfont.eot');
-  src: url('fonts/GoudyStM-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-       url('fonts/GoudyStM-Italic-webfont.woff') format('woff'),
-       url('fonts/GoudyStM-Italic-webfont.ttf') format('truetype'),
-       url('fonts/GoudyStM-Italic-webfont.svg#webfonto679uXZB') format('svg');
+  src: url('fonts/GoudyStM/GoudyStM-Italic-webfont.eot');
+  src: url('fonts/GoudyStM/GoudyStM-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/GoudyStM/GoudyStM-Italic-webfont.woff') format('woff'),
+       url('fonts/GoudyStM/GoudyStM-Italic-webfont.ttf') format('truetype'),
+       url('fonts/GoudyStM/GoudyStM-Italic-webfont.svg#webfonto679uXZB') format('svg');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Goudy';
-  src: url('fonts/GoudyStM-webfont.eot');
-  src: url('fonts/GoudyStM-webfont.eot?#iefix') format('embedded-opentype'),
-       url('fonts/GoudyStM-webfont.woff') format('woff'),
-       url('fonts/GoudyStM-webfont.ttf') format('truetype'),
-       url('fonts/GoudyStM-webfont.svg#webfontuJixCSe1') format('svg');
+  src: url('fonts/GoudyStM/GoudyStM-webfont.eot');
+  src: url('fonts/GoudyStM/GoudyStM-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/GoudyStM/GoudyStM-webfont.woff') format('woff'),
+       url('fonts/GoudyStM/GoudyStM-webfont.ttf') format('truetype'),
+       url('fonts/GoudyStM/GoudyStM-webfont.svg#webfontuJixCSe1') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
+
+@font-face {
+  font-family: 'LeagueGothic';
+  src: url('fonts/LeagueGothic/LeagueGothic-Regular.woff') format('woff');
+  src: url('fonts/LeagueGothic/LeagueGothic-Regular.otf') format('opentype'),
+       url('fonts/LeagueGothic/LeagueGothic-Regular.woff2') format('woff2'),
+       url('fonts/LeagueGothic/LeagueGothic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 * {
   box-sizing: border-box;
@@ -64,35 +74,45 @@ section {
   margin: 10vh;
   color: black;
   z-index: 1;
+  font-size: 4vh;
 }
 
-.unit {
+.explainer {
+  margin-top: 20vh;
+  margin-bottom: 5vh;
+  font-size: 4vh;
+}
+
+p.unit {
   color: black;
-  font-size: 7vh;
   z-index: 1;
   margin-bottom: 0vh;
+  font-family: 'LeagueGothic';
+  font-size: 5vh;
 }
 
 .xs {
-  font-size: 3vh;
-  margin-top: 4vh;
-  color: rgba(0, 0, 0, 0.3);
+  font-size: 4.5vh;
+  color: rgba(0, 0, 0, 0.8);
+  margin-left: 2vh;
 }
 
 .sm {
   font-size: 5vh;
-  margin-top: 4vh;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.8);
+  margin-left: 2vh;
 }
 
 .md {
   font-size: 6vh;
-  color: rgb(255, 228, 196, 0.4);
+  color: rgb(255, 228, 196, 0.8);
+  margin-left: 2vh;
 }
 
 .lg {
-  font-size: 7vh;
-  color: rgb(255, 228, 196, 0.4);
+  font-size: 8vh;
+  color: rgb(255, 228, 196, 0.8);
+  margin-left: 2vh;
 }
 
 .scroll-item-title {
@@ -113,7 +133,7 @@ section {
 }
 
 .grams-title {
-  background-color: rgb(255, 228, 196, 0.6);
+  background-color: rgb(255, 228, 196, 0.5);
   color: black;
 }
 
