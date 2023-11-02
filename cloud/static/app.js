@@ -17,7 +17,9 @@ const observer = new IntersectionObserver((entries) => {
             .catch((error) => console.error(error));
         }
     });
-});
+}, {
+    threshold: [1],
+  });
   
 // Add scroll items to IntersectionObserver
 const scrollItems = document.querySelectorAll('.scroll-item');
