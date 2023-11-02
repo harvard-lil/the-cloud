@@ -17,6 +17,9 @@ def turn_on():
     except subprocess.CalledProcessError:
         return '<h1>Failed to turn on {}</h1>'.format(kasaIP)
 
+@app.route("/about", methods=["GET"])
+def render_about():
+    return render_template('./about.html')
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)

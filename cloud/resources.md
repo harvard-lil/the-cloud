@@ -6,6 +6,7 @@
 
 ## Typeface
 [Sorts Mill Goudy](https://www.theleagueofmoveabletype.com/sorts-mill-goudy)
+[League Gothic](https://www.theleagueofmoveabletype.com/league-gothic)
 
 ## Sourcing of each entry
 
