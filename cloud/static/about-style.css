@@ -1,0 +1,25 @@
+.about-cloud{
+    background-color: rgb(255, 228, 196, 0.5);
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    height: 400vh;
+}
+
+.about-title {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-family: 'Goudy', serif;
+    font-style: italic;
+    font-size: 5vh;
+    margin: 5vh;
+}
+
+.about-text {
+    align-items: center;
+    justify-content: center;
+    font-family: 'Goudy', serif;
+    font-size: 3vh;
+    margin: 5vh;
+}
+

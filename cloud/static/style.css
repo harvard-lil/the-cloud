@@ -40,7 +40,7 @@ body {
 }
 
 html {
-  background-image: url("images/light-cloud.jpg");
+  background-image: url("images/cloud-repeat.jpg");
   z-index: -1;
 }
 
@@ -178,4 +178,21 @@ p.unit {
   background-color: rgba(37, 39, 42, 0.6);
   opacity: 70%;
   z-index: -1;
+}
+
+.menu {
+  position: absolute;
+  color: rgb(0, 0, 0);
+  left: 2%;
+  top: 5%;
+  transform: scale(1.5);
+  z-index: 10;
+}
+
+.menu {
+  position: absolute;
+  color: rgb(0, 0, 0);
+  left: 4%;
+  top: 2%;
+  font-family: 'Goudy', serif;
 }
