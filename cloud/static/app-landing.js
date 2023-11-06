@@ -1,31 +1,3 @@
-// Intersection Observer code for each scroll object
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-        
-            const scrollItem = entry.target;
-            const fetchURL = scrollItem.dataset.fetchUrl;
-            // Issue a fetch command with time argument
-            fetch(fetchURL, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'text/html',
-                }
-            })
-            .then((response) => response.text())
-            .catch((error) => console.error(error));
-        }
-    });
-}, {
-    threshold: [1],
-  });
-  
-// Add scroll items to IntersectionObserver
-const scrollItems = document.querySelectorAll('.scroll-item');
-scrollItems.forEach((scrollItem) => {
-    observer.observe(scrollItem);
-});
-
 // Change the background color from rgb(255, 228, 196) to rgb(109, 132, 156, 0.5)
 const gramItems = document.getElementsByClassName("grams")
 for (var i = 0; i < gramItems.length; i++) {
