@@ -5,6 +5,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
+    return render_template('./landing.html')
+
+@app.route("/cloud")
+def render_cloud():
     return render_template('./index.html')
 
 @app.route("/on", methods=["GET"])
