@@ -16,7 +16,7 @@ def turn_on():
     kasaIP = '192.168.0.1'
     timeOn = request.args.get('time')
     try:
-        stdout = subprocess.run(['cloud/on.sh', kasaIP, timeOn], check=True)
+        stdout = subprocess.run(['./on.sh', kasaIP, timeOn], check=True)
         return '<h1>Turning On {}: {}</h1>'.format(kasaIP, stdout)
     except subprocess.CalledProcessError:
         return '<h1>Failed to turn on {}</h1>'.format(kasaIP)
