@@ -80,4 +80,6 @@ or to run detached
 
 To run open to the internet, you can use a [Raspberry Pi](https://www.raspberrypi.org). You'll have to install Poetry to install dependencies as indicated above. Copy the code from this repository (with or without changes) to your Pi.
 
+The Pi will need two network interfaces, one wireless, for connection to the smart outlet, and the other either wireless or wired, for connection to the internet. It may be simpler to use an Ethernet connection for the latter. Exposing the service running on the Pi to the outside world can be accomplished various ways. Where you control the router at the edge of your network, you could use port forwarding to direct incoming traffic to the Pi. In its current deployment, without that control, we're using a [Cloudflare tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/). [ngrok](https://ngrok.com/) is another possibility.
+
 [Back to top](#the-cloud)
