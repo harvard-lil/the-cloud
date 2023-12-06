@@ -1,10 +1,12 @@
+let threshold = window.innerWidth > 980 ? 1 : 0.85;
 // Intersection Observer code for each scroll object
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-        
+
             const scrollItem = entry.target;
             const fetchURL = scrollItem.dataset.fetchUrl;
+
             // Issue a fetch command with time argument
             fetch(fetchURL, {
                 method: 'GET',
@@ -17,9 +19,9 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: [1],
+    threshold: [threshold],
   });
-  
+
 // Add scroll items to IntersectionObserver
 const scrollItems = document.querySelectorAll('.scroll-item');
 scrollItems.forEach((scrollItem) => {
