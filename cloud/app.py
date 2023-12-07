@@ -21,6 +21,15 @@ def turn_on():
     except subprocess.CalledProcessError:
         return '<h1>Failed to turn on {}</h1>'.format(kasaIP)
 
+@app.route("/off", methods=["GET"])
+def turn_off():
+    kasaIP = '192.168.0.1'
+    try:
+        subprocess.run(['./off.sh', kasaIP], check=True)
+        return render_template('./off.html')
+    except subprocess.CalledProcessError:
+        return '<h1>Failed to turn off {}</h1>'.format(kasaIP)
+
 @app.route("/about", methods=["GET"])
 def render_about():
     return render_template('./about.html')
