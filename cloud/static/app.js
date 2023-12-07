@@ -1,4 +1,14 @@
-let threshold = window.innerWidth > 980 ? 1 : 0.85;
+// threshold argument changes depending on screensize due to iOS finickiness
+if (window.innerWidth <= 834) {
+    var threshold = 0.85;
+}
+else if (834 < window.innerWidth <= 980) {
+    var threshold = 0.85425;
+}
+else {
+    var threshold = 1;
+}
+
 // Intersection Observer code for each scroll object
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
