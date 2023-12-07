@@ -25,7 +25,14 @@ const observer = new IntersectionObserver((entries) => {
                 }
             })
             .then((response) => response.text())
-            .catch((error) => console.error(error));
+            .catch((error) => {
+                if (error instanceof TypeError){
+                    console.log("Turned off midway through")
+                }
+                else {
+                console.error(error);
+                }
+            })
         }
     });
 }, {
