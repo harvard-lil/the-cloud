@@ -82,7 +82,7 @@ To run open to the internet, you can use a [Raspberry Pi](https://www.raspberryp
 
 #### Networking
 
-The Pi will need two network interfaces, one wireless, for connection to the smart outlet, and the other either wireless or wired, for connection to the internet. It may be simpler to use an Ethernet connection for the latter. Exposing the service running on the Pi to the outside world can be accomplished various ways. Where you control the router at the edge of your network, you could use port forwarding to direct incoming traffic to the Pi. In its current deployment, without that control, we're using a [Cloudflare tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/). [ngrok](https://ngrok.com/) is another possibility.
+The Pi will need two network interfaces, one wireless, for connection to the smart outlet, and the other either wireless or wired, for connection to the internet. It may be simpler to use an Ethernet connection for the latter. Exposing the service running on the Pi to the outside world can be accomplished various ways. Where you control the router at the edge of your network, you could use port forwarding to direct incoming traffic to the Pi. In its current deployment, without that control, we're using a [Cloudflare tunnel](#cloudflare-tunnel). [ngrok](https://ngrok.com/) is another possibility.
 
 In many situations, you will not have access to an ethernet port, and will need two wireless connections. Further, in some cases you will not be in a place with a usable wifi access point, so you may need to tether the Pi to a phone acting as hotspot. Because the Pi only has one on-board wireless network interface, get a USB wireless interface, something like [this](https://www.adafruit.com/product/1012). (It is possible to tether via Bluetooth, which would obviate the need for the external wifi interface, but we haven't experimented with this yet.) Here's a way to set up both interfaces, using the tethering example; this is basically similar to using some other wireless access point.
 
@@ -102,6 +102,16 @@ network={
 ```
 
 Then, start a hotspot on your phone; run `sudo raspi-config`, select "System options" in the first menu, then "Wireless LAN" in the second; enter the hotspot's SSID, then the hotspot's password. This produces `/etc/wpa_supplicant/wpa_supplicant.conf`. Wait a few seconds or a minute, then confirm you're online. Note that re-running this as you move to new networks is additive; you'll end up with multiple `network` sections in the config file, so you may want to clean it out periodically.
+
+#### Cloudflare tunnel
+
+Exposing the application via a Cloudflare tunnel requires the installation of `cloudflared`, the configuration of a tunnel with a public hostname (currently at Cloudflare's Zero Trust interface, under Access - Tunnels), and adding it to `cloudflared` on the Pi:
+
+```
+sudo cloudflared service install <long id from tunnel overview here>
+```
+
+See [the docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/).
 
 #### Troubleshooting
 
