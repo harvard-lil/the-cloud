@@ -44,7 +44,7 @@ You should now have a pump that allows air to be blown through the hose but does
 
 #### Clouds
 
-To make the clouds, put the opening of a balloon around the mouth of your pump, making sure it reaches past the foam tape. You can secure it with some string in a [clove hitch knot](https://www.netknots.com/rope_knots/clove-hitch).
+To make the clouds, put the opening of a balloon around the mouth of your pump, making sure it reaches past the foam tape. You can secure it with some string in a [clove hitch](https://www.netknots.com/rope_knots/clove-hitch).
 
 ![The balloon pulled over the foam secured with a clove hitch know](cloud/static/images/balloon-attached.jpg)
 
