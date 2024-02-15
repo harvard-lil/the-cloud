@@ -88,7 +88,7 @@ In many situations, you will not have access to an ethernet port, and will need 
 
 The two wireless network interfaces are called wlan0 and wlan1 (it shouldn't matter which is which); we'll use the Pi's built-in configuration system, `raspi-config`, to configure the former, and we'll configure the latter by hand to connect to the Kasa smartplug. (The actual mechanism for configuration is the same, files in `/etc/wpa_supplicant`; it's just convenient to use `raspi-config` for the one that may change more frequently.)
 
-First, make the file `/etc/wpa_supplicant/wpa_supplicant-wlan1.conf`; you might to change the SSID for your smartplug:
+First, make the file `/etc/wpa_supplicant/wpa_supplicant-wlan1.conf`; you might need to change the SSID for your smartplug:
 
 ```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
