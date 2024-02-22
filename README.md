@@ -9,8 +9,10 @@ Repo for the Cloud app with Python 3.9
       - [Clouds](#clouds)
   - [For Developers](#for-developers)
     - [Poetry](#poetry)
-    - [Docker](#docker)
     - [Raspberry Pi](#raspberry-pi)
+      - [Networking](#networking)
+      - [ngrok](#ngrok)
+      - [Troubleshooting](#troubleshooting)
 
 ## For Makers
 
@@ -57,7 +59,7 @@ You'll want to set up the app with the balloon deflated.
 ## For Developers
 
 ### Poetry
-You can run locally with Poetry by first [installing the dependencies specified](https://python-poetry.org/docs/basic-usage/#installing-dependencies) and then using the [poetry run](https://python-poetry.org/docs/basic-usage/#using-poetry-run) command:
+You can run locally with Poetry by first [installing the dependencies specified](https://python-poetry.org/docs/basic-usage/#installing-dependencies) with `poetry install` and then using the [poetry run](https://python-poetry.org/docs/basic-usage/#using-poetry-run) command:
 
 ```
 cd cloud
@@ -67,7 +69,8 @@ poetry run python app.py
 You can also run with an application server, instead of running Flask directly:
 
 ```
-poetry run gunicorn 'cloud.app:app'
+cd cloud
+poetry run gunicorn 'app:app'
 ```
 
 If you make changes to `poetry.lock`, run `poetry export -o cloud/requirements.txt` to update requirements for use in a non-Poetry virtual environment.
