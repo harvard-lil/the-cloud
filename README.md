@@ -9,8 +9,10 @@ Repo for the Cloud app with Python 3.9
       - [Clouds](#clouds)
   - [For Developers](#for-developers)
     - [Poetry](#poetry)
-    - [Docker](#docker)
     - [Raspberry Pi](#raspberry-pi)
+      - [Networking](#networking)
+      - [ngrok](#ngrok)
+      - [Troubleshooting](#troubleshooting)
 
 ## For Makers
 
