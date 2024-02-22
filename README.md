@@ -1,5 +1,5 @@
 # The Cloud
-Repo for the Cloud app with Python 3.7
+Repo for the Cloud app with Python 3.9
 
 - [The Cloud](#the-cloud)
   - [For Makers](#for-makers)
@@ -59,30 +59,26 @@ You'll want to set up the app with the balloon deflated.
 ### Poetry
 You can run locally with Poetry by first [installing the dependencies specified](https://python-poetry.org/docs/basic-usage/#installing-dependencies) and then using the [poetry run](https://python-poetry.org/docs/basic-usage/#using-poetry-run) command:
 
-`cd cloud`  
-`poetry run python app.py`
-
-### Docker
-
-You can run locally with Docker:
-
 ```
 cd cloud
-docker build -t cloud .
-docker run -p 5000:5000 cloud
+poetry run python app.py
 ```
 
-or to run detached
+You can also run with an application server, instead of running Flask directly:
 
-`docker run -dp 5000:5000 cloud`
+```
+poetry run gunicorn 'cloud.app:app'
+```
+
+If you make changes to `poetry.lock`, run `poetry export -o cloud/requirements.txt` to update requirements for use in a non-Poetry virtual environment.
 
 ### Raspberry Pi
 
-To run open to the internet, you can use a [Raspberry Pi](https://www.raspberrypi.org). You'll have to install Poetry to install dependencies as indicated above. Copy the code from this repository (with or without changes) to your Pi.
+To run open to the internet, you can use a [Raspberry Pi](https://www.raspberrypi.org). You'll have to install Poetry to install dependencies as indicated above, or set up a virtual environment and run `pip install -r cloud/requirements.txt`. Copy the code from this repository (with or without changes) to your Pi.
 
 #### Networking
 
-The Pi will need two network interfaces, one wireless, for connection to the smart outlet, and the other either wireless or wired, for connection to the internet. It may be simpler to use an Ethernet connection for the latter. Exposing the service running on the Pi to the outside world can be accomplished various ways. Where you control the router at the edge of your network, you could use port forwarding to direct incoming traffic to the Pi. In its current deployment, without that control, we're using a [Cloudflare tunnel](#cloudflare-tunnel). [ngrok](https://ngrok.com/) is another possibility.
+The Pi will need two network interfaces, one wireless, for connection to the smart outlet, and the other either wireless or wired, for connection to the internet. It may be simpler to use an Ethernet connection for the latter. Exposing the service running on the Pi to the outside world can be accomplished various ways. Where you control the router at the edge of your network, you could use port forwarding to direct incoming traffic to the Pi. In its current deployment, without that control, we're using [ngrok](https://ngrok.com/). A [Cloudflare tunnel](#cloudflare-tunnel) is another possibility.
 
 In many situations, you will not have access to an ethernet port, and will need two wireless connections. Further, in some cases you will not be in a place with a usable wifi access point, so you may need to tether the Pi to a phone acting as hotspot. Because the Pi only has one on-board wireless network interface, get a USB wireless interface, something like [this](https://www.adafruit.com/product/1012). (It is possible to tether via Bluetooth, which would obviate the need for the external wifi interface, but we haven't experimented with this yet.) Here's a way to set up both interfaces, using the tethering example; this is basically similar to using some other wireless access point.
 
@@ -103,31 +99,36 @@ network={
 
 Then, start a hotspot on your phone; run `sudo raspi-config`, select "System options" in the first menu, then "Wireless LAN" in the second; enter the hotspot's SSID, then the hotspot's password. This produces `/etc/wpa_supplicant/wpa_supplicant.conf`. Wait a few seconds or a minute, then confirm you're online. Note that re-running this as you move to new networks is additive; you'll end up with multiple `network` sections in the config file, so you may want to clean it out periodically.
 
-#### Cloudflare tunnel
+#### ngrok
 
-Exposing the application via a Cloudflare tunnel requires the installation of `cloudflared`, the configuration of a tunnel with a public hostname (currently at Cloudflare's Zero Trust interface, under Access - Tunnels), and adding it to `cloudflared` on the Pi:
+Exposing the application via ngrok requires [the installation of ngrok](https://dashboard.ngrok.com/get-started/setup/raspberrypi). There are a few different approaches, but this `apt` method works:
 
 ```
-sudo cloudflared service install <long id from tunnel overview here>
+curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com bullseye main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
 ```
 
-See [the docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/).
+You could then run `ngrok config add-authtoken <your-authtoken>`, start the application with `poetry run python app.py`, and run `ngrok http http://localhost:5000`, but for regular use you'll want to [create a static domain](https://dashboard.ngrok.com/cloud-edge/domains), set up a config file, something like
+
+```
+version: 2
+authtoken: <your-authtoken>
+tunnels:
+  the-cloud:
+    proto: http
+    addr: 5000
+    domain: <your-domain>
+```
+
+then install and start the service with
+
+```
+sudo ngrok service install --config ~/.config/ngrok/ngrok.yml
+sudo ngrok service start
+```
 
 #### Troubleshooting
 
-We've observed two error conditions. One is that occasionally the Cloudflare tunnel stops working. This can be fixed by restarting `cloudflared`:
-
-```
-sudo systemctl restart cloudflared
-```
-
-You can check on the service with
-
-```
-sudo systemctl status cloudflared
-```
-
-A possible mitigation is to restart `cloudflared` on a schedule.
+We've observed two error conditions. One, when we were experimenting with a Cloudflare tunnel instead of ngrok, was that occasionally the tunnel stopped working. This could be fixed by restarting `cloudflared`; a possible mitigation would be to restart `cloudflared` on a schedule. We have not yet spent enough time running ngrok to know if there's an equivalent issue, but `sudo ngrok service restart` should do the trick.
 
 The other problem is when the Kasa smartplug becomes unresponsive; in this case, the Pi appears still to be on both networks, and sends on/off messages to the smartplug, but it doesn't act on them. Switching the smartplug briefly to always-on, then back, appears to fix this, though the plug may then act on all the messages sent in the meantime. It's possible some reconnection in software could help.
 
