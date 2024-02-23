@@ -433,16 +433,6 @@ files = [
 ]
 
 [[package]]
-name = "subprocess-run"
-version = "0.0.8"
-description = "The subprocess module extension to run processes."
-optional = false
-python-versions = "*"
-files = [
-    {file = "subprocess.run-0.0.8.tar.gz", hash = "sha256:5760270139acc4cc4058184e539f5b613dbe0073d84ee43247c2e0fc5c04db4e"},
-]
-
-[[package]]
 name = "typing-extensions"
 version = "4.9.0"
 description = "Backported and Experimental Type Hints for Python 3.8+"
@@ -488,4 +478,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "366890f38453589d7256988006cc17ac5e17e3f042b6afad7ee1b8d55a36e507"
+content-hash = "4693faff7e233a43613ab1594194f0a23ad3b29228b97c075ec7b9c0a81a72c8"
