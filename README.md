@@ -66,6 +66,8 @@ cd cloud
 poetry run python app.py
 ```
 
+Keep poetry up to date by running `poetry install --sync` when you add new dependencies. If you have issues running `poetry install`, try `poetry install -q`.
+
 You can also run with an application server, instead of running Flask directly:
 
 ```
@@ -74,6 +76,19 @@ poetry run gunicorn 'app:app'
 ```
 
 If you make changes to `poetry.lock`, run `poetry export -o cloud/requirements.txt` to update requirements for use in a non-Poetry virtual environment.
+
+To use a non-Poetry virtualenv:
+
+```
+cd top_level_dir
+python3 -m venv env
+. env/bin/activate
+pip install -r cloud/requirements.txt
+cd cloud
+gunicorn app:app
+```
+
+Then `deactivate` when you are done using the environment.
 
 ### Raspberry Pi
 
