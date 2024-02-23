@@ -9,13 +9,11 @@ readme = "README.md"
 python = "^3.9"
 Flask = "2.3"
 python-kasa = "^0.5.3"
-"subprocess.run" = "^0.0.8"
 gunicorn = "^21.2.0"
 
 [tool.poetry.group.dev.dependencies]
 Flask = "2.3"
 python-kasa = "^0.5.3"
-"subprocess.run" = "^0.0.8"
 
 [build-system]
 requires = ["poetry-core"]
