@@ -66,7 +66,7 @@ cd cloud
 poetry run python app.py
 ```
 
-Keep poetry up to date by running `poetry install --sync` when you add new dependencies. If you have issues running `poetry install`, try `poetry install -q`.
+Keep Poetry up to date by running `poetry install --sync` when you add new dependencies. If you have issues running `poetry install`, try `poetry install -q`.
 
 You can also run with an application server, instead of running Flask directly:
 
