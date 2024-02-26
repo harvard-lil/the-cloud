@@ -90,7 +90,7 @@ gunicorn app:app
 
 Then `deactivate` when you are done using the environment.
 
-To update poetry, run `poetry self update` or `poetry self update -q`. If those don't work, you can always remove then reinstall poetry.
+To update Poetry, run `poetry self update` or `poetry self update -q`. If those don't work, you can always remove then reinstall Poetry.
 
 ```
 rm -rf ~/.local/share/pypoetry/
