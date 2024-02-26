@@ -90,6 +90,14 @@ gunicorn app:app
 
 Then `deactivate` when you are done using the environment.
 
+To update poetry, run `poetry self update` or `poetry self update -q`. If those don't work, you can always remove then reinstall poetry.
+
+```
+rm -rf ~/.local/share/pypoetry/
+rm ~/.local/bin/poetry
+curl -sSL https://install.python-poetry.org | python3 -
+```
+
 ### Raspberry Pi
 
 To run open to the internet, you can use a [Raspberry Pi](https://www.raspberrypi.org). You'll have to install Poetry to install dependencies as indicated above, or set up a virtual environment and run `pip install -r cloud/requirements.txt`. Copy the code from this repository (with or without changes) to your Pi.
